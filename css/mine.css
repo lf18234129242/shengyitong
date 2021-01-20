@@ -1,0 +1,62 @@
+.mine-header {
+  width: 100vw;
+  height: 2.9rem;
+  background-image: linear-gradient(to right, #2DB85B, #009732);
+  box-sizing: border-box;
+  padding-top: .2rem;
+  padding-right: .27rem;
+}
+.mine-header .image-card {
+  width: 0.23rem;
+  height: 0.23rem;
+}
+.mine-header .image-set {
+  width: 0.2rem;
+  height: 0.2rem;
+  margin-left: .12rem;
+}
+.persion-center-title {
+  text-align: center;
+  font-size: .18rem;
+  color: #ffffff;
+  margin: .2rem 0;
+}
+.user-info {
+  width: 100vw;
+  box-sizing: border-box;
+  padding: 0 .29rem;
+}
+.user-info .user-logo {
+  width: .52rem;
+  height: .52rem;
+  box-sizing: border-box;
+  border-radius: 50%;
+  margin-right: .15rem;
+  flex-shrink: 0;
+}
+.user-info .info-detail-box {
+  color: #ffffff;
+  height: 0.52rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.user-info .info-detail-box .detail-name {
+  font-size: .14rem;
+}
+.user-info .info-detail-box .detail-identity {
+  box-sizing: border-box;
+  border: .01rem solid #ffffff;
+  border-radius: .05rem;
+  text-align: center;
+  font-size: .13rem;
+  height: .2rem;
+  line-height: .18rem;
+  padding: 0 .05rem;
+}
+.user-info .image-share {
+  width: .24rem;
+  height: .24rem;
+  margin-left: auto;
+}
