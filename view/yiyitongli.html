@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./../css/base.css">
+  <link rel="stylesheet" href="./../css/swiper.min.css">
+  <link rel="stylesheet" href="https://cdn.bootcss.com/weui/1.1.3/style/weui.min.css">
+  <link rel="stylesheet" href="https://cdn.bootcss.com/jquery-weui/1.2.1/css/jquery-weui.min.css">
+  <link rel="stylesheet" href="./../css/yiyitongli.css">
+  <title>易医通历</title>
+</head>
+<body>
+  <div class="main-box">
+    <div class="nav-box flex-m-sb">
+      <img src="./../image/icon-menu.png" alt="" class="menu">
+      <img src="./../image/mine_set.png" alt="" class="set">
+    </div>
+    <div class="main-title">易医通历</div>
+    <div class="main-header-box flex-m">
+      <div class="left-header">
+        <div class="left-title pr">葛医堂易医通历</div>
+        <div class="left-desc pr">
+          根据生辰对您身体健康状况的进行评估，早预防、早调理、早保健...
+          <span class="right-arrow">></span>
+        </div>
+      </div>
+      <div class="right-cover-box pr">
+        <img class="avatar" src="./../image/put-question.png" alt="">
+        <img src="./../image/put-question.png" alt="" class="bagua">
+      </div>
+    </div>
+    
+    <div class="tab-box flex">
+      <div class="tab-item active-tab-item">易医通历</div>
+      <div class="tab-item">智能诊断</div>
+      <div class="tab-item">当值穴位</div>
+      <div class="tab-item">易乐处方</div>
+    </div>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">Slide 1</div>
+        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">Slide 3</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+<script src="./../js/base.js"></script>
+<script src="./../js/swiper.min.js"></script>
+<script>
+  var swiper = new Swiper('.swiper-container', {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    pagination: {
+      clickable: true,
+    },
+  });
+</script>
