@@ -11,19 +11,188 @@
     <script src="./../js/base.js"></script>
 </head>
 <body>
-    <div class="mine-header">
-        <div class="flex-m-end">
-            <img src="./../image/mine_card.png" alt="" class="image-card">
-            <img src="./../image/mine_set.png" alt="" class="image-set">
-        </div>
-        <p class="persion-center-title">个人中心</p>
-        <div class="user-info flex-m">
-            <img src="https://image.doulaoban.com/avatar/image/1609237727603" alt="" class="user-logo">
-            <div class="info-detail-box">
-                <p class="detail-name">刘先生</p>
-                <p class="detail-identity">当前身份：用户</p>
+    <div class="mine-pages">
+        <div class="mine-header">
+            <div class="flex-m-end">
+                <img src="./../image/mine_card.png" alt="" class="image-card">
+                <img src="./../image/mine_set.png" alt="" class="image-set">
             </div>
-            <img src="./../image/mine_share.png" alt="" class="image-share">
+            <p class="persion-center-title">个人中心</p>
+            <div class="user-info flex-m">
+                <img src="https://image.doulaoban.com/avatar/image/1609237727603" alt="" class="user-logo">
+                <div class="info-detail-box">
+                    <p class="detail-name">刘先生</p>
+                    <p class="detail-identity">当前身份：用户</p>
+                </div>
+                <img src="./../image/mine_share.png" alt="" class="image-share">
+            </div>
+            <div class="cumulative-box flex-m-sb">
+                <div class="cumulative-div-box">
+                    <p class="cumulative-number">89</p>
+                    <p class="cumulative-title">累计订单</p>
+                </div>
+                <div class="number-tip">
+                    <img src="./../image/image-tip.png" alt="" class="image-tip">
+                    <p class="number-notes">2</p>
+                </div>
+                <div class="line-box"></div>
+                <div class="number-tip">
+                    <img src="./../image/image-profit.png" alt="" class="image-profit">
+                    <p class="number-notes">2</p>
+                </div>
+                <div class="cumulative-div-box">
+                    <p class="cumulative-number">89.00</p>
+                    <p class="cumulative-title">累计收益</p>
+                </div>
+            </div>
+        </div>
+        <div class="wallet-manage-box">
+            <div class="flex-m wallet-manage-top">
+                <img src="./../image/image-wallet.png" alt="" class="image-wallet">
+                <p class="wallet-p">我的钱包</p>
+                <div class="flex-m to-profit">
+                    <p class="profit-p">收益管理</p>
+                    <img src="./../image/green-right-icon.png" alt="" class="right-icon">
+                </div>
+            </div>
+            <div class="wallet-line"></div>
+            <div class="flex-m-sb wallet-manage-bttom">
+                <div class="wallet-detail">
+                    <p class="detail-number">18.00<span>元</span></p>
+                    <div class="flex-m">
+                        <p class="detail-title">当前余额</p>
+                        <img src="./../image/grey-right-icon.png" alt="" class="right-icon">
+                    </div>
+                </div>
+                <div class="wallet-detail">
+                    <p class="detail-number">68.00<span>元</span></p>
+                    <div class="flex-m">
+                        <p class="detail-title">总收益</p>
+                        <img src="./../image/grey-right-icon.png" alt="" class="right-icon">
+                    </div>
+                </div>
+                <div class="wallet-detail">
+                    <p class="detail-number">18<span>元</span></p>
+                    <div class="flex-m">
+                        <p class="detail-title">已兑换</p>
+                        <img src="./../image/grey-right-icon.png" alt="" class="right-icon">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="operation-box">
+            <div class="flex-m-sb my-friends-box">
+                <div class="flex-m">
+                    <img src="./../image/image-friends.png" alt="" class="image-friends">
+                    <p>我的好友</p>
+                </div>
+                <div class="flex-m">
+                    <p class="btn-p">详细</p>
+                    <img src="./../image/green-right-icon.png" alt="" class="right-icons">
+                </div>
+            </div>
+            <div class="wallet-line"></div>
+            <div class="flex-m friends-list">
+                <div class="friends-detail-box">
+                    <span></span>
+                </div>
+                <div class="friends-detail-box">
+                    <span></span>
+                </div>
+                <div class="friends-detail-box"></div>
+                <div class="friends-detail-box"></div>
+                <div class="friends-detail-box"></div>
+                <div class="add-friends">+</div>
+                <img src="./../image/black-right-icon.png" alt="" class="right-icons">
+            </div>
+            <div class="flex-m-sb transfer-box">
+                <div class="transfer-line"></div>
+                <p>转赠好友</p>
+                <div class="transfer-line"></div>
+            </div>
+            <div class="flex-m frequency-box">
+                <img src="./../image/image-recharge.png" alt="">
+                <input type="text" placeholder="可有次数：1000次">
+            </div>
+            <div class="flex-m frequency-box">
+                <img src="./../image/image-phone.png" alt="">
+                <input type="text" placeholder="对方手机：15536832504">
+            </div>
+            <div class="flex-m frequency-box">
+                <img src="./../image/image-assist.png" alt="">
+                <input type="text" placeholder="转赠次数：1000次">
+            </div>
+            <div class="sub-btn">点击提交</div>
+        </div>
+        <div class="flex-m-sb quick-operation-box">
+            <div>
+                <img src="./../image/image-archives.png" alt="" style="width: 0.28rem; height: 0.24rem;">
+                <p>用户档案</p>
+            </div>
+            <div>
+                <img src="./../image/image-news.png" alt="" style="width: 0.24rem; height: 0.24rem;">
+                <p>我的消息</p>
+                <p class="tips-p">2</p>
+            </div>
+            <div>
+                <img src="./../image/image-order.png" alt="" style="width: 0.25rem; height: 0.26rem;">
+                <p>订单管理</p>
+                <p class="tips-p">2</p>
+            </div>
+            <div>
+                <img src="./../image/image-share-color.png" alt="" style="width: 0.26rem; height: 0.29rem;">
+                <p>分享管理</p>
+                <p class="tips-p">2</p>
+            </div>
+            <div>
+                <img src="./../image/image-address.png" alt="" style="width: 0.29rem; height: 0.28rem;">
+                <p>地址管理</p>
+            </div>
+            <div>
+                <img src="./../image/image-profit-color.png" alt="" style="width: 0.26rem; height: 0.25rem;">
+                <p>收益管理</p>
+                <p class="tips-p">2</p>
+            </div>
+            <div>
+                <img src="./../image/image-integral.png" alt="" style="width: 0.27rem; height: 0.27rem;">
+                <p>积分管理</p>
+                <p class="tips-p">2</p>
+            </div>
+            <div>
+                <img src="./../image/image-statement.png" alt="" style="width: 0.23rem; height: 0.27rem;">
+                <p>免责声明</p>
+            </div>
+            <div>
+                <img src="./../image/image-concat.png" alt="" style="width: 0.23rem; height: 0.25rem;">
+                <p>联系客服</p>
+                <p class="tips-p">2</p>
+            </div>
+            <div>
+                <img src="./../image/image-about.png" alt="" style="width: 0.3rem; height: 0.25rem;">
+                <p>关于我们</p>
+            </div>
+        </div>
+        <div class="flex-m-sa tab-bar">
+            <a href="javascript:;" class="tab-bar-detail">
+                <img src="./../image/image-about.png" alt="">
+                <p>首页</p>
+            </a>
+            <a href="javascript:;" class="tab-bar-detail">
+                <img src="./../image/image-about.png" alt="">
+                <p>分类</p>
+            </a>
+            <a href="javascript:;" class="tab-bar-detail">
+                <img src="./../image/image-about.png" alt="">
+                <p>音乐</p>
+            </a>
+            <a href="javascript:;" class="tab-bar-detail">
+                <img src="./../image/image-about.png" alt="">
+                <p>购物车</p>
+            </a>
+            <a href="javascript:;" class="tab-bar-detail">
+                <img src="./../image/image-about.png" alt="">
+                <p>个人中心</p>
+            </a>
         </div>
     </div>
 </body>
