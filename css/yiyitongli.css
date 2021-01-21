@@ -109,22 +109,233 @@
   width: 100%;
   padding-left: .47rem;
 }
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
 
-  /* Center slide text vertically */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
+.swiper-slide {
+  width: 1.63rem!important;
+  height: 2.11rem;
+  margin-right: .24rem!important;
 }
+
+.active-swiper-card{
+  background: #009732!important;
+}
+.swiper-card-box{
+  width: 1.63rem;
+  height: 2rem;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.16);
+  border-radius: .2rem;
+  padding-top: .12rem;
+  position: relative;
+  background: #7AC695;
+}
+
+.card-label{
+  width: .68rem;
+  height: .24rem;
+  background: #FFFFFF;
+  border-radius: .12rem;
+  text-align: center;
+  line-height: .24rem;
+  color: #009732;
+  font-size: .13rem;
+  margin: 0 0 0 .81rem;
+}
+
+.card-image{
+  width: .8rem;
+  height: .8rem;
+  border-radius: 50%;
+  display: block;
+  margin: .2rem auto;
+}
+
+.card-index{
+  width: .28rem;
+  height: .28rem;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  left: .19rem;
+  bottom: -.1rem;
+  font-size: .16rem;
+  color: #009732;
+  text-align: center;
+  line-height: .28rem;
+
+}
+
+.bottom-arrow{
+  display: block;
+  transform: rotate(90deg);
+  color: #009732;
+  position: absolute;
+  left: .13rem;
+  bottom: -0.1rem;
+}
+
+.active-form{
+  display: block!important;
+}
+.form-box{
+  width: 2.9rem;
+  margin: .11rem auto .3rem;
+  display: none;
+  position: relative;
+}
+.input-item-box{
+  width: 100%;
+  height: .44rem;
+  border-radius: .22rem;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.16);
+  background: #fff;
+  padding: 0 .23rem;
+}
+.input-item-box:nth-child(1){
+  margin-bottom: .11rem;
+}
+
+.left-icon{
+  width: .24rem;
+  height: .21rem;
+  margin-right: .12rem;
+}
+.input-before{
+  position: relative;
+}
+
+.input-before::after{
+  position: absolute;
+  left: -.05rem;
+  top: -0.04rem;
+  content: '';
+  width: .01rem;
+  height: .29rem;
+  background: #808080;
+}
+
+.input-text{
+  font-size: .14rem;
+  color: #808080;
+}
+
+.input-value{
+  width: 1.6rem;
+  text-align: right;
+  margin-right: .08rem;
+}
+
+.input-bottom-arrow{
+  transform: rotate(90deg);
+  color: #000;
+  font-size: .2rem;
+}
+
+.btn_primary{
+  width: 2.9rem;
+  height: .47rem;
+  background: #009732;
+  border-radius: .45rem;
+  margin-top: .15rem;
+}
+
+.test-text{
+  width: 100%;
+  height: .17rem;
+  color: #808080;
+  line-height: .17rem;
+  font-size: .13rem;
+  font-weight: bold;
+  text-align: center;
+  margin: .11rem 0 .8rem;
+}
+
+.form-label-box{
+  width: 100%;
+  height: .29rem;
+  margin: .18rem auto .14rem;
+}
+
+.active-form-label{
+  background: #009732!important;
+}
+.form-label-item{
+  width: .91rem;
+  height: .29rem;
+  background: #808080;
+  border-radius: 5px;
+  line-height: .29rem;
+  text-align: center;
+  color: #fff;
+  font-size: .14rem;
+}
+
+.icon-2510{
+  width: .71rem;
+  height: 1.12rem;
+  position: absolute;
+  left: .19rem;
+  top: 0;
+  z-index: 9;
+}
+
+.icon-music{
+  display: block;
+  width: 2.59rem;
+  height: 2.59rem;
+  margin: .24rem auto 0;
+  position: relative;
+  z-index: 1;
+}
+
+.more-dot{
+  position: absolute;
+  right: -0.1rem;
+  top: -.04rem;
+}
+.more-dot span{
+  width: .05rem;
+  height: .05rem;
+  border-radius: 50%;
+  background: #808080;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.16);
+  margin: 0 2px;
+}
+
+.music-control-box{
+  width: 100%;
+  height: .3rem;
+  margin: -0.18rem auto .19rem;
+}
+.icon-loop{
+  width: .3rem;
+  height: .3rem;
+}
+
+.music-time{
+  width: 100%;
+  height: .19rem;
+  color: #808080;
+  font-size: .14rem;
+  margin: .05rem 0 .11rem;
+}
+
+.play-box{
+  width: 100%;
+  height: .48rem;
+  margin-top: .14rem;
+}
+
+.music-pre{
+  width: .16rem;
+  height: .19rem;
+}
+.music-play{
+  width: .43rem;
+  height: .48rem;
+  margin: 0 .7rem;
+}
+
+
+
+
+
