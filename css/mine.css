@@ -1,3 +1,6 @@
+.mine-pages {
+  padding-bottom: 0.89rem;
+}
 .mine-header {
   width: 100vw;
   height: 2.9rem;
@@ -59,4 +62,274 @@
   width: .24rem;
   height: .24rem;
   margin-left: auto;
+}
+.cumulative-box {
+  width: 100vw;
+  height: .32rem;
+  padding: 0 .7rem;
+  color: #ffffff;
+  margin-top: .2rem;
+}
+.cumulative-box .line-box {
+  width: .01rem;
+  height: 100%;
+  background: #ffffff;
+}
+.cumulative-box .cumulative-div-box {
+  text-align: center;
+}
+.cumulative-box .cumulative-div-box .cumulative-number {
+  font-size: .13rem;
+}
+.cumulative-box .cumulative-div-box .cumulative-title {
+  font-size: .11rem;
+}
+.cumulative-box .number-tip {
+  position: relative;
+}
+.cumulative-box .number-tip .image-tip {
+  width: .215rem;
+  height: 0.235rem;
+}
+.cumulative-box .number-tip .image-profit {
+  width: .225rem;
+  height: 0.215rem;
+}
+.cumulative-box .number-tip .number-notes {
+  width: .12rem;
+  height: .12rem;
+  border-radius: 50%;
+  background: #FA4248;
+  position: absolute;
+  font-size: .07rem;
+  text-align: center;
+  line-height: .12rem;
+  color: #ffffff;
+  bottom: .05rem;
+  right: -0.04rem;
+  z-index: 9;
+}
+.wallet-manage-box {
+  width: 3.17rem;
+  height: 1.1rem;
+  margin: 0 auto;
+  background: #ffffff;
+  box-sizing: border-box;
+  border-radius: .09rem;
+  box-shadow: 0 .03rem .05rem rgba(0, 0, 0, 0.2);
+  margin-top: -0.54rem;
+  z-index: 10;
+  padding: .09rem .19rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.wallet-manage-box .wallet-manage-top .image-wallet {
+  width: .22rem;
+  height: .2rem;
+  margin-right: .09rem;
+  flex-shrink: 0;
+}
+.wallet-manage-box .wallet-manage-top .wallet-p {
+  font-size: .13rem;
+  color: #333333;
+}
+.wallet-manage-box .wallet-manage-top .to-profit {
+  margin-left: auto;
+}
+.wallet-manage-box .wallet-manage-top .to-profit .profit-p {
+  font-size: .13rem;
+  color:#009732;
+}
+.wallet-manage-box .wallet-manage-top .to-profit .right-icon {
+  width: .2rem;
+  height: .2rem;
+}
+.wallet-line {
+  width: 100%;
+  height: .01rem;
+  background: #D4D4D4;
+}
+.wallet-manage-box .wallet-manage-bttom .wallet-detail .detail-number {
+  font-size: 18px;
+  color: #333333;
+  font-weight: bold;
+}
+.wallet-manage-box .wallet-manage-bttom .wallet-detail .detail-number span{
+  font-size: 10px;
+  color: #333333;
+}
+.wallet-manage-box .wallet-manage-bttom .wallet-detail .right-icon{
+  width: .2rem;
+  height: .2rem;
+}
+.wallet-manage-box .wallet-manage-bttom .wallet-detail .detail-title {
+  font-size: .11rem;
+  color: #808080;
+}
+.operation-box {
+  width: 3.17rem;
+  height: 3.17rem;
+  box-sizing: border-box;
+  border-radius: .09rem;
+  padding: .12rem .19rem;
+  box-shadow: 0 .03rem .05rem rgba(0, 0, 0, 0.2);
+  margin: .14rem auto;
+}
+.operation-box .my-friends-box {
+  margin-bottom: .09rem;
+}
+.operation-box .my-friends-box .image-friends {
+  width: .3rem;
+  height: .22rem;
+  margin-right: .03rem;
+}
+.operation-box .my-friends-box .right-icons {
+  width: .2rem;
+  height: .2rem;
+}
+.operation-box .my-friends-box div {
+  font-size: .13rem;
+  color: #333333;
+}
+.operation-box .my-friends-box div .btn-p {
+  color: #009732;
+}
+.operation-box .friends-list {
+  margin: .1rem 0 .12rem;
+}
+.operation-box .friends-list .friends-detail-box {
+  width: .36rem;
+  height: .36rem;
+  background: #D4D4D4;
+  border-radius: 50%;
+  box-shadow: 0 .03rem .05rem rgba(0, 0, 0, 0.2);
+  margin-right: .07rem;
+  position: relative;
+}
+.operation-box .friends-list .friends-detail-box span{
+  width: .08rem;
+  height: .08rem;
+  background: #009732;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 11;
+}
+.operation-box .friends-list .add-friends {
+  width: .36rem;
+  height: .36rem;
+  background: rgba(0, 151, 50, 0.2);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 0.36rem;
+  font-size: .24rem;
+  color: #009732;
+}
+.operation-box .friends-list .right-icons {
+  width: .2rem;
+  height: .2rem;
+  margin-left: 0.05rem;
+}
+.operation-box .transfer-box .transfer-line {
+  width: 1.09rem;
+  height: .01rem;
+  background: #D4D4D4;
+}
+.operation-box .transfer-box p {
+  font-size: .13rem;
+  color: #333333;
+}
+.operation-box .frequency-box {
+  width: 2.81rem;
+  height: .36rem;
+  box-sizing: border-box;
+  border: .01rem solid #707070;
+  border-radius: .26rem;
+  padding: .07rem .15rem;
+  margin: .09rem 0;
+}
+.operation-box .frequency-box img {
+  width: .22rem;
+  height: .22rem;
+  margin-right: 0.11rem;
+}
+.operation-box .frequency-box input {
+  width: 88%;
+  border: none;
+  border-left: .01rem solid #000000;
+  padding-left: .07rem;
+  font-size: .14rem;
+  color: #808080;
+}
+.operation-box .sub-btn {
+  width: 2.81rem;
+  height: .36rem;
+  background: #009732;
+  box-sizing: border-box;
+  border-radius: .26rem;
+  text-align: center;
+  line-height: .36rem;
+  font-size: .14rem;
+  color: #FFFFFF;
+}
+.quick-operation-box {
+  width: 3.17rem;
+  height: 1.38rem;
+  box-sizing: border-box;
+  border-radius: .09rem;
+  padding: .12rem .19rem;
+  box-shadow: 0 .03rem .05rem rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+.quick-operation-box div {
+  text-align: center;
+  position: relative;
+}
+.quick-operation-box div p{
+  font-size: .11rem;
+  color: #333333;
+}
+.quick-operation-box div .tips-p {
+  position: absolute;
+  width: .12rem;
+  height: .12rem;
+  background: #FA4248;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 0.12rem;
+  font-size: .1rem;
+  color: #ffffff;
+  bottom: .2rem;
+  right: 0.08rem;
+}
+.tab-bar {
+  width: 100vw;
+  height: .6rem;
+  background: #ffffff;
+  border-top-left-radius: .45rem;
+  border-top-right-radius: .45rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  box-shadow: .07rem .05rem .18rem #5BCE95;
+}
+.tab-bar .tab-bar-detail {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.tab-bar .tab-bar-detail img {
+  width: .25rem;
+  height: .23rem;
+}
+.tab-bar .tab-bar-detail p {
+  font-size: .1rem;
+  margin-top: .03rem;
+  color: #333333;
 }
