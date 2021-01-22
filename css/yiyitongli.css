@@ -111,9 +111,9 @@
 }
 
 .swiper-slide {
-  width: 1.63rem!important;
+  /* width: 1.63rem!important; */
   height: 2.11rem;
-  margin-right: .24rem!important;
+  /* margin-right: .24rem!important; */
 }
 
 .active-swiper-card{
@@ -199,6 +199,7 @@
   height: .21rem;
   margin-right: .12rem;
 }
+
 .input-before{
   position: relative;
 }
@@ -222,6 +223,10 @@
   width: 1.6rem;
   text-align: right;
   margin-right: .08rem;
+}
+
+#xuewei{
+  border: 0;
 }
 
 .input-bottom-arrow{
@@ -335,7 +340,25 @@
   margin: 0 .7rem;
 }
 
+.toolbar .toolbar-inner{
+  height: .4rem;
+}
+.toolbar .picker-button{
+  height: .4rem;
+  line-height: .4rem;
+}
+.toolbar .title{
+  line-height: .4rem;
+  height: .4rem;
+  font-size: .2rem;
+}
 
-
+.weui-slider__handler{
+  width: .12rem;
+  height: .12rem;
+  background: #009732;
+  margin-left: -0.06rem;
+  margin-top: -0.06rem;
+}
 
 

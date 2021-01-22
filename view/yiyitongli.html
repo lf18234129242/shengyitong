@@ -22,7 +22,7 @@
         <div class="left-title pr">葛医堂易医通历</div>
         <div class="left-desc pr">
           根据生辰对您身体健康状况的进行评估，早预防、早调理、早保健...
-          <span class="right-arrow">></span>
+          <span class="right-arrow">›</span>
         </div>
       </div>
       <div class="right-cover-box pr">
@@ -33,10 +33,10 @@
     
     <!-- 轮播nav -->
     <div class="tab-box flex">
-      <div class="tab-item active-tab-item">易医通历</div>
-      <div class="tab-item">智能诊断</div>
-      <div class="tab-item">当值穴位</div>
-      <div class="tab-item">易乐处方</div>
+      <div class="tab-item banner-nav active-tab-item">易医通历</div>
+      <div class="tab-item banner-nav">智能诊断</div>
+      <div class="tab-item banner-nav">当值穴位</div>
+      <div class="tab-item banner-nav">易乐处方</div>
     </div>
     <!-- 轮播卡片 -->
     <div class="swiper-container">
@@ -85,7 +85,7 @@
     </div>
     <!-- 轮播下表单 -->
     <!-- one -->
-    <div class="form-box">
+    <div class="form-box active-form">
       <div class="input-item-box flex-m">
         <img src="./../image/icon-date.png" alt="" class="left-icon">
         <div class="input-text input-before">日期</div>
@@ -115,7 +115,7 @@
       </div>
     </div>
     <!-- three -->
-    <div class="form-box ">
+    <div class="form-box">
       <div class="input-item-box flex-m">
         <img src="./../image/icon-date.png" alt="" class="left-icon">
         <div class="input-text input-before">日期</div>
@@ -134,16 +134,22 @@
         <div class="form-label-item">子午流注</div>
         <div class="form-label-item">穴位对应</div>
       </div>
-      <!-- TODO 下拉框 -->
+      <!-- 下拉框 -->
       <div class="input-item-box flex-m">
         <img src="./../image/icon-xuewei.png" alt="" class="left-icon">
-        <div class="input-text input-before">穴位</div>
+        <div class="input-before" style="top: -.1rem;"></div>
+        <input 
+          type="text" 
+          class="input-text" 
+          id="xuewei" 
+          value="穴位"
+        >
         <div class="input-value input-text"></div>
         <span class="input-bottom-arrow">›</span>
       </div>
     </div>
     <!-- four -->
-    <div class="form-box active-form">
+    <div class="form-box">
       <img src="./../image/icon-2510.png" alt="" class="icon-2510">
       <img src="./../image/icon-music.png" alt="" class="icon-music">
       <div class="more-dot flex-m">
@@ -156,19 +162,20 @@
         <img src="./../image/icon-music-list.png" alt="" class="icon-loop">
       </div>
       <!-- <audio src=""> -->
-      <div class="weui-progress">
-        <div class="weui-progress__bar">
-          <div class="weui-progress__inner-bar js_progress" style="width: 80%;"></div>
+      <div class="weui-slider" id="slide1">
+        <div class="weui-slider__inner">
+          <div style="width: 30%;" class="weui-slider__track"></div>
+          <div style="left: 30%;" class="weui-slider__handler"></div>
         </div>
       </div>
       <div class="music-time flex-m-sb">
         <span>00:00</span>
         <span>03:09</span>
       </div>
-      <div class="tab-box flex-m-c">
-        <div class="tab-item active-tab-item">和弦</div>
-        <div class="tab-item">单弦</div>
-        <div class="tab-item">歌曲</div>          
+      <div class="tab-box flex-m-c" style="padding: 0;">
+        <div class="tab-item music-type active-tab-item">和弦</div>
+        <div class="tab-item music-type">单弦</div>
+        <div class="tab-item music-type">歌曲</div>          
       </div>
       <!-- 音乐控制器 -->
       <div class="play-box flex-m-c">
@@ -184,16 +191,104 @@
 </body>
 </html>
 <script src="./../js/base.js"></script>
-<script src="./../js/zepto.min.js"></script>
 <script src="./../js/swiper.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery-weui/1.2.1/js/jquery-weui.min.js"></script>
 <script>
-  var swiper = new Swiper('.swiper-container', {
-    slidesPerView: 'auto',
+  let activeIndex = 0
+  var mySwiper = new Swiper('.swiper-container', {
+    slidesPerView: 0.5,
     spaceBetween: 30,
     pagination: {
       clickable: true,
     },
+    // 滑动swiper切换nav和表单
+    on: {
+      slideChangeTransitionStart: function(){
+        activeIndex = this.activeIndex
+        handleChangeBannerNav()
+        handleChangeSwiperClass()
+        handleChangeForm()
+      },
+    },
   });
 
+  // 点击nav切换轮播卡片、表单区域
+  $('.banner-nav').click(function() {
+    activeIndex = $('.banner-nav').index(this)
+
+    handleChangeBannerNav()
+    handleChangeSwiperClass()
+    handleChangeForm()
+
+    mySwiper.slideTo(activeIndex, 500, false)
+  })
+
+  // 下拉选择
+  $("#xuewei").select({
+    title: "选择穴位",
+    items: ["法官", "医生", "猎人", "学生", "记者", "其他"]
+  });
+
+  // 播放/暂停音乐
+  var isPlay = false
+  $('.music-play').click(function() {
+    isPlay = !isPlay
+    if(isPlay){
+      $('.music-play').attr('src', './../image/icon-play.png')
+      $('.icon-music').attr('src', './../image/icon-musicing.png')
+    } else {
+      $('.music-play').attr('src', './../image/icon-playing.png')
+      $('.icon-music').attr('src', './../image/icon-music.png')
+    }
+  })
+
+  // 音乐进度条
+  $('#slide1').slider(function (percent) {
+    console.log(percent)
+  })
+
+  // 音乐类型切换
+  $('.music-type').click(function() {
+    let index = $('.music-type').index(this)
+    $('.music-type').each(function() {
+      $(this).removeClass('active-tab-item')
+    })
+    $('.music-type').eq(index).addClass('active-tab-item')
+  })
+
+  // 灵龟八法切换
+  $('.form-label-item').click(function() {
+    let index = $('.form-label-item').index(this)
+    $('.form-label-item').each(function() {
+      $(this).removeClass('active-form-label')
+    })
+    $('.form-label-item').eq(index).addClass('active-form-label')
+  })
+
+
+  // 切换banner nav选中颜色
+  function handleChangeBannerNav() {
+    $('.banner-nav').each(function() {
+      $(this).removeClass('active-tab-item')
+    })
+    $('.banner-nav').eq(activeIndex).addClass('active-tab-item')
+  }
+
+  // 切换轮播卡片背景色
+  function handleChangeSwiperClass() {
+    $('.swiper-card-box').each(function() {
+      $(this).removeClass('active-swiper-card')
+    })
+    $('.swiper-card-box').eq(activeIndex).addClass('active-swiper-card')
+  }
+
+  // 切换表单
+  function handleChangeForm() {
+    $('.form-box').each(function() {
+      $(this).removeClass('active-form')
+    })
+    $('.form-box').eq(activeIndex).addClass('active-form')
+  }
 
 </script>
