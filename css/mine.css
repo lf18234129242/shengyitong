@@ -305,31 +305,3 @@
   bottom: .2rem;
   right: 0.08rem;
 }
-.tab-bar {
-  width: 100vw;
-  height: .6rem;
-  background: #ffffff;
-  border-top-left-radius: .45rem;
-  border-top-right-radius: .45rem;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  z-index: 999;
-  box-shadow: .07rem .05rem .18rem #5BCE95;
-}
-.tab-bar .tab-bar-detail {
-  width: 20%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.tab-bar .tab-bar-detail img {
-  width: .25rem;
-  height: .23rem;
-}
-.tab-bar .tab-bar-detail p {
-  font-size: .1rem;
-  margin-top: .03rem;
-  color: #333333;
-}
