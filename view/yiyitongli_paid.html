@@ -27,7 +27,7 @@
       </div>
       <div class="right-cover-box pr">
         <img class="avatar" src="./../image/put-question.png" alt="">
-        <img src="./../image/icon-bagua.png" alt="" class="bagua">
+        <img src="./../image/put-question.png" alt="" class="bagua">
       </div>
     </div>
     
@@ -150,22 +150,45 @@
     </div>
     <!-- four -->
     <div class="form-box">
-      <div class="input-item-box flex-m">
-        <img src="./../image/icon-date.png" alt="" class="left-icon">
-        <div class="input-text input-before">日期</div>
-        <div class="input-value input-text">农历1900年12月12日</div>
-        <span class="input-bottom-arrow">›</span>
+      <img src="./../image/icon-2510.png" alt="" class="icon-2510">
+      <img src="./../image/icon-music.png" alt="" class="icon-music">
+      <div class="more-dot flex-m">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
-      <div class="input-item-box flex-m">
-        <img src="./../image/icon-time.png" alt="" class="left-icon">
-        <div class="input-text input-before">时辰</div>
-        <div class="input-value input-text">丑时：01:00-02:59</div>
-        <span class="input-bottom-arrow">›</span>
+      <div class="music-control-box flex-m-sb">
+        <img src="./../image/icon-loop.png" alt="" class="icon-loop">
+        <img src="./../image/icon-music-list.png" alt="" class="icon-loop">
+      </div>
+      <!-- <audio src=""> -->
+      <div class="weui-slider" id="slide1">
+        <div class="weui-slider__inner">
+          <div style="width: 30%;" class="weui-slider__track"></div>
+          <div style="left: 30%;" class="weui-slider__handler"></div>
+        </div>
+      </div>
+      <div class="music-time flex-m-sb">
+        <span>00:00</span>
+        <span>03:09</span>
+      </div>
+      <div class="tab-box flex-m-c" style="padding: 0;">
+        <div class="tab-item music-type active-tab-item">和弦</div>
+        <div class="tab-item music-type">单弦</div>
+        <div class="tab-item music-type">歌曲</div>          
+      </div>
+      <!-- 音乐控制器 -->
+      <div class="play-box flex-m-c">
+        <img src="./../image/icon-pre.png" alt="" class="music-pre">
+        <img src="./../image/icon-play.png" alt="" class="music-play">
+        <img src="./../image/icon-next.png" alt="" class="music-pre">
       </div>
     </div>
     <!-- 点击查询 -->
-    <a href="javascript:;" class="weui-btn btn_primary">点击查询</a>
-    <div class="test-text">已有 10000 人预测</div>
+    <div class="search-box">
+      <a href="javascript:;" class="weui-btn btn_primary">点击查询</a>
+      <div class="test-text">已有 10000 人预测</div>
+    </div>
   </div>
 </body>
 </html>
@@ -188,9 +211,18 @@
         handleChangeBannerNav()
         handleChangeSwiperClass()
         handleChangeForm()
+        showSearch()
       },
     },
   });
+
+  function showSearch() {
+    if(activeIndex === 3) {
+      $('.search-box').hide()
+    } else {
+      $('.search-box').show()
+    }
+  }
 
   // 点击nav切换轮播卡片、表单区域
   $('.banner-nav').click(function() {
@@ -199,6 +231,7 @@
     handleChangeBannerNav()
     handleChangeSwiperClass()
     handleChangeForm()
+    showSearch()
 
     mySwiper.slideTo(activeIndex, 500, false)
   })
