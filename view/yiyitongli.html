@@ -198,7 +198,7 @@
 <script src="https://cdn.bootcss.com/jquery-weui/1.2.1/js/jquery-weui.min.js"></script>
 <script>
   // swiper 个数
-  const swiperNum = 4
+  const swiperNum = $('.swiper-slide').length
   let activeIndex = 0
   let swiperIndex = 0
   var mySwiper = new Swiper('.swiper-container', {
@@ -214,9 +214,8 @@
       slideChangeTransitionStart: function(){
         activeIndex = this.activeIndex
         swiperIndex = this.activeIndex % swiperNum
-        console.log({swiperIndex}, '------')
         handleChangeBannerNav(swiperIndex)
-        handleChangeSwiperClass(swiperIndex)
+        handleChangeSwiperClass(activeIndex)
         handleChangeForm(swiperIndex)
       },
     },
@@ -225,11 +224,10 @@
   // 点击nav切换轮播卡片、表单区域
   $('.banner-nav').click(function() {
     activeIndex = $('.banner-nav').index(this)
-    console.log({activeIndex})
+    
     handleChangeBannerNav(activeIndex)
     handleChangeSwiperClass(activeIndex)
     handleChangeForm(activeIndex)
-
 
     mySwiper.slideTo(activeIndex, 500, false)
   })
@@ -280,7 +278,6 @@
   // 切换banner nav选中颜色
   function handleChangeBannerNav(index) {
     $('.banner-nav').each(function() {
-      console.log(index, $('.banner-nav').index(this), '===========')
       $(this).removeClass('active-tab-item')
     })
     $('.banner-nav').eq(index).addClass('active-tab-item')

@@ -249,10 +249,15 @@
 <script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
 <script src="https://cdn.bootcss.com/jquery-weui/1.2.1/js/jquery-weui.min.js"></script>
 <script>
+  // swiper 个数
+  const swiperNum = $('.swiper-slide').length
   let activeIndex = 0
+  let swiperIndex = 0
   var mySwiper = new Swiper('.swiper-container', {
     slidesPerView: 'auto',
-    spaceBetween: -50,
+    loopedSlides: swiperNum,
+    loop: true,
+    spaceBetween: 0,
     pagination: {
       clickable: true,
     },
@@ -260,9 +265,10 @@
     on: {
       slideChangeTransitionStart: function(){
         activeIndex = this.activeIndex
-        handleChangeBannerNav()
-        handleChangeSwiperClass()
-        handleChangeForm()
+        swiperIndex = this.activeIndex % swiperNum
+        handleChangeBannerNav(swiperIndex)
+        handleChangeSwiperClass(activeIndex)
+        handleChangeForm(swiperIndex)
       },
     },
   });
@@ -271,9 +277,9 @@
   $('.banner-nav').click(function() {
     activeIndex = $('.banner-nav').index(this)
 
-    handleChangeBannerNav()
-    handleChangeSwiperClass()
-    handleChangeForm()
+    handleChangeBannerNav(activeIndex)
+    handleChangeSwiperClass(activeIndex)
+    handleChangeForm(activeIndex)
 
     mySwiper.slideTo(activeIndex, 500, false)
   })
@@ -321,27 +327,27 @@
   })
 
   // 切换banner nav选中颜色
-  function handleChangeBannerNav() {
+  function handleChangeBannerNav(index) {
     $('.banner-nav').each(function() {
       $(this).removeClass('active-tab-item')
     })
-    $('.banner-nav').eq(activeIndex).addClass('active-tab-item')
+    $('.banner-nav').eq(index).addClass('active-tab-item')
   }
 
   // 切换轮播卡片背景色
-  function handleChangeSwiperClass() {
+  function handleChangeSwiperClass(index) {
     $('.swiper-card-box').each(function() {
       $(this).removeClass('active-swiper-card')
     })
-    $('.swiper-card-box').eq(activeIndex).addClass('active-swiper-card')
+    $('.swiper-card-box').eq(index).addClass('active-swiper-card')
   }
 
   // 切换表单
-  function handleChangeForm() {
+  function handleChangeForm(index) {
     $('.form-box').each(function() {
       $(this).removeClass('active-form')
     })
-    $('.form-box').eq(activeIndex).addClass('active-form')
+    $('.form-box').eq(index).addClass('active-form')
   }
 
   // 切换性别

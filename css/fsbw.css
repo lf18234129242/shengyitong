@@ -106,12 +106,13 @@
 }
 
 .swiper-container {
-  width: 100%;
-  padding-left: .47rem;
+  width: calc(100% - .47rem - .47rem);
+  /* padding: 0 .47rem; */
+  margin: 0 auto;
 }
 
 .swiper-slide {
-  /* width: 1.63rem!important; */
+  width: 1.87rem!important;
   height: 2.11rem;
   /* margin-right: .24rem!important; */
 }
