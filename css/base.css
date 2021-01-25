@@ -57,8 +57,25 @@ input,textarea{
 
 body, html{
   height: 100%;
+  font-size: 100px!important;
 }
 
+@media only screen and (min-width: 480px) {
+  html{
+    font-size: 100px!important;
+  }
+}
+@media only screen and (min-width: 414px) {
+  html{
+    font-size: 100px!important;
+  }
+}
+
+@media only screen and (min-width: 400px) {
+  html{
+    font-size: 100px!important;
+  }
+}
 
 /* 单行文本溢出隐藏省略 */
 .suspe{
