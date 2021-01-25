@@ -139,7 +139,7 @@ body, html{
 }
 
 .main-box{
-  width: 3.75rem;
+  width: 100%;
   height: 100vh;
   overflow: auto;
   background: #F7F7FA;

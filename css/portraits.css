@@ -1,5 +1,5 @@
 .portraits-box{
-  width: 3.75rem;
+  width: 100%;
   height: 8.12rem;
   background: url('./../image/image-portraits.png') center/cover no-repeat;
   box-sizing: border-box;

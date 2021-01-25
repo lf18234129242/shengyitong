@@ -106,7 +106,7 @@
 
 .swiper-container {
   width: 100%;
-  padding-left: .47rem;
+  padding: 0 .47rem;
 }
 
 .swiper-slide {
